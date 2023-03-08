@@ -1,0 +1,1198 @@
+[
+ {
+  "code": "494",
+  "name_product": "ACEITE CUTICULA MAXGLOW",
+  "price": 0.53,
+  "sell_price": 1,
+  "aviability": 6,
+  "active": true
+ },
+ {
+  "code": "1043",
+  "name_product": "ALBUN DE STIKERS",
+  "price": 1.9100000000000001,
+  "sell_price": 3.5,
+  "aviability": 5,
+  "COSTO TOTAL": 9.55,
+  "VENTA TOTAL": 17.5
+ },
+ {
+  "code": "FN006",
+  "name_product": "AZULENO 240G",
+  "price": 4.7,
+  "sell_price": 7,
+  "aviability": 1,
+  "COSTO TOTAL": 4.7,
+  "VENTA TOTAL": 7
+ },
+ {
+  "code": "22",
+  "name_product": "BOLSA PARA PEDICURA",
+  "price": 1.27,
+  "sell_price": 2.5,
+  "aviability": 22,
+  "COSTO TOTAL": 27.94,
+  "VENTA TOTAL": 55
+ },
+ {
+  "code": "283",
+  "name_product": "BOLITAS EFERVECENTE 240GR",
+  "price": 5.3,
+  "sell_price": 8.5,
+  "aviability": 2,
+  "COSTO TOTAL": 10.6,
+  "VENTA TOTAL": 17
+ },
+ {
+  "code": "17",
+  "name_product": "BLEDO SENCILLO UNICA ",
+  "price": 0.48,
+  "sell_price": 1,
+  "aviability": 12,
+  "COSTO TOTAL": 5.76,
+  "VENTA TOTAL": 12
+ },
+ {
+  "code": "746",
+  "name_product": "CALENTADOR DE OLLA PROWAX200",
+  "price": 9.54,
+  "sell_price": 20,
+  "aviability": 2,
+  "COSTO TOTAL": 19.08,
+  "VENTA TOTAL": 40
+ },
+ {
+  "code": "1016",
+  "name_product": "CEPILLO PARA LAVAR PUNTA DORADA",
+  "price": 1.5899999999999999,
+  "sell_price": 3,
+  "aviability": 5,
+  "COSTO TOTAL": 7.95,
+  "VENTA TOTAL": 15
+ },
+ {
+  "code": "496",
+  "name_product": "COLECCIONES CARNAVAL MAXGLOW",
+  "price": 6.89,
+  "sell_price": 12,
+  "aviability": 1,
+  "COSTO TOTAL": 6.89,
+  "VENTA TOTAL": 12
+ },
+ {
+  "code": "36",
+  "name_product": "CORTA CUTICULA SQLINGE ",
+  "price": 0.8,
+  "sell_price": 2,
+  "aviability": 1,
+  "COSTO TOTAL": 0.8,
+  "VENTA TOTAL": 2
+ },
+ {
+  "code": "756",
+  "name_product": "CORTA UÑAS ARCO IRIS",
+  "price": 0.85,
+  "sell_price": 2,
+  "aviability": 5,
+  "COSTO TOTAL": 4.25,
+  "VENTA TOTAL": 10
+ },
+ {
+  "code": "878",
+  "name_product": "CHOLAS DESECHABLE",
+  "price": 1.9100000000000001,
+  "sell_price": 4,
+  "aviability": 8,
+  "COSTO TOTAL": 15.28,
+  "VENTA TOTAL": 32
+ },
+ {
+  "code": "41",
+  "name_product": "DAPPEN SENCILLO ",
+  "price": 0.18,
+  "sell_price": 1,
+  "aviability": 22,
+  "COSTO TOTAL": 3.96,
+  "VENTA TOTAL": 22
+ },
+ {
+  "code": "1001",
+  "name_product": "DAPPER CERAMICA",
+  "price": 1.8,
+  "sell_price": 3.5,
+  "aviability": 3,
+  "COSTO TOTAL": 5.4,
+  "VENTA TOTAL": 10.5
+ },
+ {
+  "code": "359",
+  "name_product": "DECORACION CRISTAL MIXTO TAZA",
+  "price": 0.65,
+  "sell_price": 1.5,
+  "aviability": 3,
+  "COSTO TOTAL": 1.95,
+  "VENTA TOTAL": 4.5
+ },
+ {
+  "code": "1143",
+  "name_product": "DECORACION FLOR BALIN ",
+  "price": 1.7,
+  "sell_price": 2.5,
+  "aviability": 5,
+  "COSTO TOTAL": 8.5,
+  "VENTA TOTAL": 12.5
+ },
+ {
+  "code": "234",
+  "name_product": "EMPUJADOR ESMALTE SENCILLO ",
+  "price": 0.42,
+  "sell_price": 1,
+  "aviability": 5,
+  "COSTO TOTAL": 2.1,
+  "VENTA TOTAL": 5
+ },
+ {
+  "code": "382",
+  "name_product": "ENVASE DE ALGODÓN PLASTICO",
+  "price": 1.27,
+  "sell_price": 2.5,
+  "aviability": 6,
+  "COSTO TOTAL": 7.62,
+  "VENTA TOTAL": 15
+ },
+ {
+  "code": "999",
+  "name_product": "ESMALTE REFLECTIVO ",
+  "price": 1.3,
+  "sell_price": 2.5,
+  "aviability": 51,
+  "COSTO TOTAL": 66.3,
+  "VENTA TOTAL": 127.5
+ },
+ {
+  "code": "407",
+  "name_product": "ESMALTES BRILLO COLOR SEMIPERMANETE",
+  "price": 0.9,
+  "sell_price": 1.5,
+  "aviability": 3,
+  "COSTO TOTAL": 2.7,
+  "VENTA TOTAL": 4.5
+ },
+ {
+  "code": "1228",
+  "name_product": "ESMALTE SEM MAXGLOW VERANO 10ML",
+  "price": 1.1,
+  "sell_price": 2.5,
+  "aviability": 2,
+  "COSTO TOTAL": 2.2,
+  "VENTA TOTAL": 5
+ },
+ {
+  "code": "74",
+  "name_product": "ESMALTES PERMANENTES",
+  "price": 0.9,
+  "sell_price": 1.5,
+  "aviability": 94,
+  "COSTO TOTAL": 84.6,
+  "VENTA TOTAL": 141
+ },
+ {
+  "code": "340",
+  "name_product": "FINISH MATTE 10ML",
+  "price": 1.4,
+  "sell_price": 2.5,
+  "aviability": 2,
+  "COSTO TOTAL": 2.8,
+  "VENTA TOTAL": 5
+ },
+ {
+  "code": "1136",
+  "name_product": "FINISH GOLD EFFECT 10ML",
+  "price": 1.5899999999999999,
+  "sell_price": 3,
+  "aviability": 4,
+  "COSTO TOTAL": 6.36,
+  "VENTA TOTAL": 12
+ },
+ {
+  "code": 1135,
+  "name_product": "FINISH SHINY EFFECT 10ML",
+  "price": 1.5899999999999999,
+  "sell_price": 3,
+  "aviability": 3,
+  "COSTO TOTAL": 4.77,
+  "VENTA TOTAL": 9
+ },
+ {
+  "code": "1137",
+  "name_product": "FINISH SILVER EFFECT 10ML ",
+  "price": 1.5899999999999999,
+  "sell_price": 3,
+  "aviability": 4,
+  "COSTO TOTAL": 6.36,
+  "VENTA TOTAL": 12
+ },
+ {
+  "code": "1059",
+  "name_product": "GEL ESCARCHADO SATURACION ",
+  "price": 1.06,
+  "sell_price": 2,
+  "aviability": 9,
+  "COSTO TOTAL": 9.54,
+  "VENTA TOTAL": 18
+ },
+ {
+  "code": "202",
+  "name_product": "GUANTES NITRILO",
+  "price": 5,
+  "sell_price": 10,
+  "aviability": 3,
+  "COSTO TOTAL": 15,
+  "VENTA TOTAL": 30
+ },
+ {
+  "code": "101",
+  "name_product": "GUILLOTINA CON DEPOSITO",
+  "price": 1.5,
+  "sell_price": 3,
+  "aviability": 1,
+  "COSTO TOTAL": 1.5,
+  "VENTA TOTAL": 3
+ },
+ {
+  "code": "100",
+  "name_product": "GUILLOTINA SIN DEPOSITO ",
+  "price": 0.85,
+  "sell_price": 1.5,
+  "aviability": 1,
+  "COSTO TOTAL": 0.85,
+  "VENTA TOTAL": 1.5
+ },
+ {
+  "code": "291",
+  "name_product": "KATANA DE LUJO",
+  "price": 1.5899999999999999,
+  "sell_price": 3,
+  "aviability": 5,
+  "COSTO TOTAL": 7.95,
+  "VENTA TOTAL": 15
+ },
+ {
+  "code": "807",
+  "name_product": "LAMPARA BLUEQUE 168W",
+  "price": 11.66,
+  "sell_price": 20,
+  "aviability": 2,
+  "COSTO TOTAL": 23.32,
+  "VENTA TOTAL": 40
+ },
+ {
+  "code": "69",
+  "name_product": "LAMPARA MANO RECARGABLE 48W",
+  "price": 34.98,
+  "sell_price": 65,
+  "aviability": 2,
+  "COSTO TOTAL": 69.96,
+  "VENTA TOTAL": 130
+ },
+ {
+  "code": "900",
+  "name_product": "LAMPARA CROMADA XZM168W",
+  "price": 13,
+  "sell_price": 25,
+  "aviability": 4,
+  "COSTO TOTAL": 52,
+  "VENTA TOTAL": 100
+ },
+ {
+  "code": "387",
+  "name_product": "LIMA MAXGLOW LUNA 100\/180 25X2",
+  "price": 0.21,
+  "sell_price": 0.5,
+  "aviability": 116,
+  "COSTO TOTAL": 24.36,
+  "VENTA TOTAL": 58
+ },
+ {
+  "code": "118",
+  "name_product": "LIMAS 100\/180             25X2",
+  "price": 0.21,
+  "sell_price": 0.5,
+  "aviability": 30,
+  "COSTO TOTAL": 6.3,
+  "VENTA TOTAL": 15
+ },
+ {
+  "code": "120",
+  "name_product": "LIMAS 150\/180             25X2",
+  "price": 0.21,
+  "sell_price": 0.5,
+  "aviability": 61,
+  "COSTO TOTAL": 12.81,
+  "VENTA TOTAL": 30.5
+ },
+ {
+  "code": "931",
+  "name_product": "LIMAS 100\/150         25X2",
+  "price": 0.21,
+  "sell_price": 0.5,
+  "aviability": 21,
+  "COSTO TOTAL": 4.41,
+  "VENTA TOTAL": 10.5
+ },
+ {
+  "code": "1089",
+  "name_product": "LIMAS 180\/240             25X2",
+  "price": 0.21,
+  "sell_price": 0.5,
+  "aviability": 50,
+  "COSTO TOTAL": 10.5,
+  "VENTA TOTAL": 25
+ },
+ {
+  "code": "736",
+  "name_product": "LIQUIDO POLI GEL 30ml",
+  "price": 0.9,
+  "sell_price": 2,
+  "aviability": 2,
+  "COSTO TOTAL": 1.8,
+  "VENTA TOTAL": 4
+ },
+ {
+  "code": "70",
+  "name_product": "MAQUINA PEDI ELECTRICO",
+  "price": 18.02,
+  "sell_price": 35,
+  "aviability": 4,
+  "COSTO TOTAL": 72.08,
+  "VENTA TOTAL": 140
+ },
+ {
+  "code": "295",
+  "name_product": "MOLDE DORADO X 500 ",
+  "price": 3.32,
+  "sell_price": 6,
+  "aviability": 5,
+  "COSTO TOTAL": 16.6,
+  "VENTA TOTAL": 30
+ },
+ {
+  "code": "126",
+  "name_product": "MONOMERO DE 2OZ ",
+  "price": 1.06,
+  "sell_price": 2,
+  "aviability": 21,
+  "COSTO TOTAL": 22.26,
+  "VENTA TOTAL": 42
+ },
+ {
+  "code": "127",
+  "name_product": "MONOMERO DE 4OZ ",
+  "price": 1.5899999999999999,
+  "sell_price": 3.5,
+  "aviability": 6,
+  "COSTO TOTAL": 9.54,
+  "VENTA TOTAL": 21
+ },
+ {
+  "code": "371",
+  "name_product": "MOSTRARIOS PARA UÑAS",
+  "price": 0.74,
+  "sell_price": 1.5,
+  "aviability": 7,
+  "COSTO TOTAL": 5.18,
+  "VENTA TOTAL": 10.5
+ },
+ {
+  "code": "55",
+  "name_product": "OLLA DEPILADORA PRO 100",
+  "price": 7,
+  "sell_price": 10,
+  "aviability": 3,
+  "COSTO TOTAL": 21,
+  "VENTA TOTAL": 30
+ },
+ {
+  "code": "137",
+  "name_product": "ORGANIZADOR PASTILLERO SENCILLO ",
+  "price": 0.42,
+  "sell_price": 1,
+  "aviability": 2,
+  "COSTO TOTAL": 0.84,
+  "VENTA TOTAL": 2
+ },
+ {
+  "code": "140",
+  "name_product": "ORGANIZADOR\/PASTILLERO",
+  "price": 1.06,
+  "sell_price": 2,
+  "aviability": 19,
+  "COSTO TOTAL": 20.14,
+  "VENTA TOTAL": 38
+ },
+ {
+  "code": "1036",
+  "name_product": "PAINTING GEL BLANCO ",
+  "price": 1.17,
+  "sell_price": 2,
+  "aviability": 4,
+  "COSTO TOTAL": 4.68,
+  "VENTA TOTAL": 8
+ },
+ {
+  "code": "95",
+  "name_product": "PANTING GEL METALIZADO ",
+  "price": 1.17,
+  "sell_price": 2.5,
+  "aviability": 4,
+  "COSTO TOTAL": 4.68,
+  "VENTA TOTAL": 10
+ },
+ {
+  "code": "148",
+  "name_product": "PALETA DE PIES DE MADERA",
+  "price": 0.64,
+  "sell_price": 1,
+  "aviability": 12,
+  "COSTO TOTAL": 7.68,
+  "VENTA TOTAL": 12
+ },
+ {
+  "code": "145",
+  "name_product": "PAQUETE DE PALETAS",
+  "price": 1.33,
+  "sell_price": 3,
+  "aviability": 13,
+  "COSTO TOTAL": 17.29,
+  "VENTA TOTAL": 39
+ },
+ {
+  "code": "1150",
+  "name_product": "PEGA RESINA  MAXGLOW",
+  "price": 0.64,
+  "sell_price": 1.5,
+  "aviability": 4,
+  "COSTO TOTAL": 2.56,
+  "VENTA TOTAL": 6
+ },
+ {
+  "code": "832",
+  "name_product": "PINCEL #12",
+  "price": 13.8,
+  "sell_price": 20,
+  "aviability": 6,
+  "COSTO TOTAL": 82.8,
+  "VENTA TOTAL": 120
+ },
+ {
+  "code": "195",
+  "name_product": "PINCEL ESPONJA DIFUMIR",
+  "price": 1,
+  "sell_price": 2,
+  "aviability": 1,
+  "COSTO TOTAL": 1,
+  "VENTA TOTAL": 2
+ },
+ {
+  "code": "171",
+  "name_product": "PINCEL GEL ",
+  "price": 0.37,
+  "sell_price": 1,
+  "aviability": 8,
+  "COSTO TOTAL": 2.96,
+  "VENTA TOTAL": 8
+ },
+ {
+  "code": "1068",
+  "name_product": "PINCEL MAXGLOW PARA DIFUMINAR",
+  "price": 3,
+  "sell_price": 6,
+  "aviability": 4,
+  "COSTO TOTAL": 12,
+  "VENTA TOTAL": 24
+ },
+ {
+  "code": "301",
+  "name_product": "PINZA MAGIC CURVE SENCILLO ",
+  "price": 0.85,
+  "sell_price": 2,
+  "aviability": 7,
+  "COSTO TOTAL": 5.95,
+  "VENTA TOTAL": 14
+ },
+ {
+  "code": "693",
+  "name_product": "PINZA MOLDE DUAL POLIGEL",
+  "price": 0.21,
+  "sell_price": 0.5,
+  "aviability": 96,
+  "COSTO TOTAL": 20.16,
+  "VENTA TOTAL": 48
+ },
+ {
+  "code": "806",
+  "name_product": "POLYGEL 15ML",
+  "price": 1.75,
+  "sell_price": 2,
+  "aviability": 2,
+  "COSTO TOTAL": 3.5,
+  "VENTA TOTAL": 4
+ },
+ {
+  "code": "779",
+  "name_product": "POLYGEL ESCARCHADO",
+  "price": 1.75,
+  "sell_price": 2,
+  "aviability": 1,
+  "COSTO TOTAL": 1.75,
+  "VENTA TOTAL": 2
+ },
+ {
+  "code": "4",
+  "name_product": "POLVO ACRILICO WHITER, CLEAR Y PINK",
+  "price": 1.06,
+  "sell_price": 2,
+  "aviability": 1,
+  "COSTO TOTAL": 1.06,
+  "VENTA TOTAL": 2
+ },
+ {
+  "code": "557",
+  "name_product": "POLVO DESTELLOS MAXGLOW SHINY 10Z",
+  "price": 1.6,
+  "sell_price": 3.5,
+  "aviability": 5,
+  "COSTO TOTAL": 8,
+  "VENTA TOTAL": 17.5
+ },
+ {
+  "code": "1070",
+  "name_product": "POLVO MAXGLOW UNIVERSO 10Z UNICA",
+  "price": 1.6,
+  "sell_price": 3.5,
+  "aviability": 6,
+  "COSTO TOTAL": 9.6,
+  "VENTA TOTAL": 21
+ },
+ {
+  "code": "204",
+  "name_product": "POMPONES DECORATIVOS ",
+  "price": 3.55,
+  "sell_price": 7,
+  "aviability": 5,
+  "COSTO TOTAL": 17.75,
+  "VENTA TOTAL": 35
+ },
+ {
+  "code": 303,
+  "name_product": "PRIMER MAXGLOW 15ml",
+  "price": 1.06,
+  "sell_price": 2,
+  "aviability": 4,
+  "COSTO TOTAL": 4.24,
+  "VENTA TOTAL": 8
+ },
+ {
+  "code": "305",
+  "name_product": "PROTEIN BOND MAXGLOW 10ML",
+  "price": 1.27,
+  "sell_price": 2,
+  "aviability": 3,
+  "COSTO TOTAL": 3.81,
+  "VENTA TOTAL": 6
+ },
+ {
+  "code": "514",
+  "name_product": "PROTEIN BOND MAXGLOW 15 ML",
+  "price": 2.01,
+  "sell_price": 4.5,
+  "aviability": 4,
+  "COSTO TOTAL": 8.04,
+  "VENTA TOTAL": 18
+ },
+ {
+  "code": "209",
+  "name_product": "PUNTA DREMEL ARCOIRIS UNICA ",
+  "price": 3.71,
+  "sell_price": 7,
+  "aviability": 7,
+  "COSTO TOTAL": 25.97,
+  "VENTA TOTAL": 49
+ },
+ {
+  "code": "1017",
+  "name_product": "PUNTA RUSA SELLADO BORDE ",
+  "price": 0.42,
+  "sell_price": 1,
+  "aviability": 2,
+  "COSTO TOTAL": 0.84,
+  "VENTA TOTAL": 2
+ },
+ {
+  "code": "221",
+  "name_product": "REMOVEDOR DE ESMALTE MAXGLOW",
+  "price": 1.06,
+  "sell_price": 2,
+  "aviability": 15,
+  "COSTO TOTAL": 15.9,
+  "VENTA TOTAL": 30
+ },
+ {
+  "code": "1082",
+  "name_product": "RESPUESTO LIMA PUNTI TALON 100 UNIDAD",
+  "price": 3.5,
+  "sell_price": 7,
+  "aviability": 2,
+  "COSTO TOTAL": 7,
+  "VENTA TOTAL": 14
+ },
+ {
+  "code": "1049",
+  "name_product": "STIKERT",
+  "price": 0.4,
+  "sell_price": 0.75,
+  "aviability": 27,
+  "COSTO TOTAL": 10.8,
+  "VENTA TOTAL": 20.25
+ },
+ {
+  "code": "309",
+  "name_product": "SEPARADOR DEDO SILICON",
+  "price": 0.51,
+  "sell_price": 1,
+  "aviability": 2,
+  "COSTO TOTAL": 1.02,
+  "VENTA TOTAL": 2
+ },
+ {
+  "code": "238",
+  "name_product": "SPONGIE MAXGLOW 100\/180 X10 ",
+  "price": 0.26,
+  "sell_price": 0.48,
+  "aviability": 15,
+  "COSTO TOTAL": 3.9,
+  "VENTA TOTAL": 7.2
+ },
+ {
+  "code": "260",
+  "name_product": "TACO COLOR X10",
+  "price": 0.19,
+  "sell_price": 0.5,
+  "aviability": 6,
+  "COSTO TOTAL": 1.1400000000000001,
+  "VENTA TOTAL": 3
+ },
+ {
+  "code": 348,
+  "name_product": "TIPS DE UÑAS COFFIN X500",
+  "price": 2.33,
+  "sell_price": 4,
+  "aviability": 5,
+  "COSTO TOTAL": 11.65,
+  "VENTA TOTAL": 20
+ },
+ {
+  "code": 272,
+  "name_product": "TIPS DE UÑAS STILETTO X500",
+  "price": 2.39,
+  "sell_price": 4,
+  "aviability": 5,
+  "COSTO TOTAL": 11.95,
+  "VENTA TOTAL": 20
+ },
+ {
+  "code": "11",
+  "name_product": "TOALLAS GASA  REMOVEDORAS",
+  "price": 1.27,
+  "sell_price": 3,
+  "aviability": 4,
+  "COSTO TOTAL": 5.08,
+  "VENTA TOTAL": 12
+ },
+ {
+  "code": "319",
+  "name_product": "TRANFER GEL MAXGLOW UNICA",
+  "price": 1.48,
+  "sell_price": 2.5,
+  "aviability": 13,
+  "COSTO TOTAL": 19.24,
+  "VENTA TOTAL": 32.5
+ },
+ {
+  "code": "621",
+  "name_product": "UÑAS JELLY TIPS COFFIN X240",
+  "price": 2.23,
+  "sell_price": 5,
+  "aviability": 8,
+  "COSTO TOTAL": 17.84,
+  "VENTA TOTAL": 40
+ },
+ {
+  "code": "826",
+  "name_product": "UÑAS JELLY TIPS STILETO X240",
+  "price": 2.23,
+  "sell_price": 5,
+  "aviability": 6,
+  "COSTO TOTAL": 13.38,
+  "VENTA TOTAL": 30
+ },
+ {
+  "code": "329",
+  "name_product": "UÑAS STILETTO X100",
+  "price": 1,
+  "sell_price": 2,
+  "aviability": 5,
+  "COSTO TOTAL": 5,
+  "VENTA TOTAL": 10
+ },
+ {
+  "code": "538",
+  "name_product": "UÑAS COFFIN X100",
+  "price": 0.8,
+  "sell_price": 2,
+  "aviability": 2,
+  "COSTO TOTAL": 1.6,
+  "VENTA TOTAL": 4
+ },
+ {
+  "code": "731",
+  "name_product": "UÑAS CURVA C XLARGA X500",
+  "price": 2.54,
+  "sell_price": 5,
+  "aviability": 4,
+  "COSTO TOTAL": 10.16,
+  "VENTA TOTAL": 20
+ },
+ {
+  "code": "521",
+  "name_product": "VENTILADOR RECARGABLE ZERO",
+  "price": 4.24,
+  "sell_price": 8,
+  "aviability": 4,
+  "COSTO TOTAL": 16.96,
+  "VENTA TOTAL": 32
+ },
+ {
+  "code": "SC009",
+  "name_product": "POLVO DE RESINA WHITE",
+  "price": 2.15,
+  "sell_price": 3,
+  "aviability": 2,
+  "COSTO TOTAL": 4.3,
+  "VENTA TOTAL": 6
+ },
+ {
+  "code": "SC011",
+  "name_product": "ESMALTES PERMANENTES PURE GEL",
+  "price": 2.92,
+  "sell_price": 3.5,
+  "aviability": 30,
+  "COSTO TOTAL": 87.6,
+  "VENTA TOTAL": 105
+ },
+ {
+  "code": "SC012",
+  "name_product": "PROTEIN BASE 15ML DE CAJITA ",
+  "price": 5.82,
+  "sell_price": 7,
+  "aviability": 2,
+  "COSTO TOTAL": 11.64,
+  "VENTA TOTAL": 14
+ },
+ {
+  "code": "SC013",
+  "name_product": "PROTEIN BASE 7,5 DE CAJITA",
+  "price": 3.6,
+  "sell_price": 4.5,
+  "aviability": 1,
+  "COSTO TOTAL": 3.6,
+  "VENTA TOTAL": 4.5
+ },
+ {
+  "code": "SC015",
+  "name_product": "PROTEIN BASE PURE GEL 15ML",
+  "price": 5.82,
+  "sell_price": 7,
+  "aviability": 1,
+  "COSTO TOTAL": 5.82,
+  "VENTA TOTAL": 7
+ },
+ {
+  "code": "SC016",
+  "name_product": "PRIMER 30ML",
+  "price": 4.15,
+  "sell_price": 7,
+  "aviability": 3,
+  "COSTO TOTAL": 12.45,
+  "VENTA TOTAL": 21
+ },
+ {
+  "code": "SC021",
+  "name_product": "PANTIN GEL BLACK 5GR",
+  "price": 1.9300000000000002,
+  "sell_price": 2.5,
+  "aviability": 1,
+  "COSTO TOTAL": 1.9300000000000002,
+  "VENTA TOTAL": 2.5
+ },
+ {
+  "code": "NV001",
+  "name_product": "MONOMERO 2 OZ",
+  "price": 3.05,
+  "sell_price": 6,
+  "aviability": 9,
+  "COSTO TOTAL": 27.45,
+  "VENTA TOTAL": 54
+ },
+ {
+  "code": "NV004",
+  "name_product": "MONOMERO 16 OZ",
+  "price": 20,
+  "sell_price": 34,
+  "aviability": 2,
+  "COSTO TOTAL": 40,
+  "VENTA TOTAL": 68
+ },
+ {
+  "code": "NV005",
+  "name_product": "ACRILICOS 1 oz",
+  "price": 3.5,
+  "sell_price": 7,
+  "aviability": 21,
+  "COSTO TOTAL": 73.5,
+  "VENTA TOTAL": 147
+ },
+ {
+  "code": "NV006",
+  "name_product": "ACRILICOS 2 oz",
+  "price": 7,
+  "sell_price": 12,
+  "aviability": 6,
+  "COSTO TOTAL": 42,
+  "VENTA TOTAL": 72
+ },
+ {
+  "code": "NV007",
+  "name_product": "NAIL PREP NAIL VANILLA",
+  "price": 3,
+  "sell_price": 6,
+  "aviability": 3,
+  "COSTO TOTAL": 9,
+  "VENTA TOTAL": 18
+ },
+ {
+  "code": "NV010",
+  "name_product": "BASE",
+  "price": 4.5,
+  "sell_price": 8,
+  "aviability": 3,
+  "COSTO TOTAL": 13.5,
+  "VENTA TOTAL": 24
+ },
+ {
+  "code": "NV011",
+  "name_product": "TOP MATTE",
+  "price": 4.5,
+  "sell_price": 8,
+  "aviability": 2,
+  "COSTO TOTAL": 9,
+  "VENTA TOTAL": 16
+ },
+ {
+  "code": "NV013",
+  "name_product": "ESMALTES",
+  "price": 3.5,
+  "sell_price": 6,
+  "aviability": 7,
+  "COSTO TOTAL": 24.5,
+  "VENTA TOTAL": 42
+ },
+ {
+  "code": "NV014",
+  "name_product": "RUBBER BASE ",
+  "price": 5.5,
+  "sell_price": 10,
+  "aviability": 1,
+  "COSTO TOTAL": 5.5,
+  "VENTA TOTAL": 10
+ },
+ {
+  "code": "16",
+  "name_product": "BANDA DEPILAR X100 UNICA",
+  "price": 1.6,
+  "sell_price": 2.5,
+  "aviability": 3,
+  "COSTO TOTAL": 4.8,
+  "VENTA TOTAL": 7.5
+ },
+ {
+  "code": "21",
+  "name_product": "BOLSA MANICURE UNICA",
+  "price": 0.53,
+  "sell_price": 2.5,
+  "aviability": 8,
+  "COSTO TOTAL": 4.24,
+  "VENTA TOTAL": 20
+ },
+ {
+  "code": "848",
+  "name_product": "CEPILLO BRUSH LIMPIAR PESTAÑA FUCSIA UNICA ",
+  "price": 0.32,
+  "sell_price": 1,
+  "aviability": 10,
+  "COSTO TOTAL": 3.2,
+  "VENTA TOTAL": 10
+ },
+ {
+  "code": "854",
+  "name_product": "ENVASE DE UTENSILIO NUEVO UNICA",
+  "price": 2,
+  "sell_price": 4,
+  "aviability": 5,
+  "COSTO TOTAL": 10,
+  "VENTA TOTAL": 20
+ },
+ {
+  "code": "867",
+  "name_product": "LAMPARA JELLY RECARGABLE UNICA",
+  "price": 6.36,
+  "sell_price": 12,
+  "aviability": 4,
+  "COSTO TOTAL": 25.44,
+  "VENTA TOTAL": 48
+ },
+ {
+  "code": "1186",
+  "name_product": "MOLDE MAXGLOW FUCSIA X300 UNICA",
+  "price": 5,
+  "sell_price": 10,
+  "aviability": 3,
+  "COSTO TOTAL": 15,
+  "VENTA TOTAL": 30
+ },
+ {
+  "code": "1208",
+  "name_product": "MOLDE MAXGLOW TORNASOL X500 UNICA",
+  "price": 6,
+  "sell_price": 12,
+  "aviability": 1,
+  "COSTO TOTAL": 6,
+  "VENTA TOTAL": 12
+ },
+ {
+  "code": "670",
+  "name_product": "NAIL PREP MAXGLOW 15 ML UNICA",
+  "price": 2.01,
+  "sell_price": 4,
+  "aviability": 3,
+  "COSTO TOTAL": 6.03,
+  "VENTA TOTAL": 12
+ },
+ {
+  "code": "1175",
+  "name_product": "POLVO ACRILICO MAXGLOW POP OLOR 10 OZ UNICA",
+  "price": 1.7,
+  "sell_price": 3.5,
+  "aviability": 4,
+  "COSTO TOTAL": 6.8,
+  "VENTA TOTAL": 14
+ },
+ {
+  "code": "1173",
+  "name_product": "POLVO ACRILICO UNICORN MAXGLOW POP OLOR 10 OZ UNICA",
+  "price": 1.7,
+  "sell_price": 3.5,
+  "aviability": 4,
+  "COSTO TOTAL": 6.8,
+  "VENTA TOTAL": 14
+ },
+ {
+  "code": "1207",
+  "name_product": "POLVO MAXGLOW FAIRY 10Z UNICA",
+  "price": 1.2,
+  "sell_price": 3.5,
+  "aviability": 17,
+  "COSTO TOTAL": 20.4,
+  "VENTA TOTAL": 59.5
+ },
+ {
+  "code": "959",
+  "name_product": "POLYGEL ACRYGEL MAXGLOW 30ML UNICA",
+  "price": 2,
+  "sell_price": 3.5,
+  "aviability": 18,
+  "COSTO TOTAL": 36,
+  "VENTA TOTAL": 63
+ },
+ {
+  "code": "218",
+  "name_product": "PUNTERO C\/PINCEL SILICON UNICA",
+  "price": 2.33,
+  "sell_price": 5,
+  "aviability": 4,
+  "COSTO TOTAL": 9.32,
+  "VENTA TOTAL": 20
+ },
+ {
+  "code": "1144",
+  "name_product": "REPUJADOR ESPATULA LADO UNICA",
+  "price": 0.85,
+  "sell_price": 2,
+  "aviability": 3,
+  "COSTO TOTAL": 2.55,
+  "VENTA TOTAL": 6
+ },
+ {
+  "code": "228",
+  "name_product": "REPUJADOR PUNTA DE LANZA UNICA",
+  "price": 0.9,
+  "sell_price": 2,
+  "aviability": 3,
+  "COSTO TOTAL": 2.7,
+  "VENTA TOTAL": 6
+ },
+ {
+  "code": "546",
+  "name_product": "REPUJADOR REPUJADOR QUIROPEDIA 26 UNICA",
+  "price": 0.9,
+  "sell_price": 2,
+  "aviability": 2,
+  "COSTO TOTAL": 1.8,
+  "VENTA TOTAL": 4
+ },
+ {
+  "code": "1158",
+  "name_product": "REPUJADOR QUIROPEDIA LANZA LADO UNICA ",
+  "price": 0.9,
+  "sell_price": 2,
+  "aviability": 2,
+  "COSTO TOTAL": 1.8,
+  "VENTA TOTAL": 4
+ },
+ {
+  "code": "FN001",
+  "name_product": "PIGMENTO BIGEN",
+  "price": 5.5,
+  "sell_price": 10,
+  "aviability": 12,
+  "COSTO TOTAL": 66,
+  "VENTA TOTAL": 120
+ },
+ {
+  "code": "FN002",
+  "name_product": "SOBRE CREMA DEPILADORA LAMPIÑA CORPORAL 30GR",
+  "price": 1.25,
+  "sell_price": 3,
+  "aviability": 11,
+  "COSTO TOTAL": 13.75,
+  "VENTA TOTAL": 33
+ },
+ {
+  "code": "FN003",
+  "name_product": "SOBRE CREMA DEPILADORA LAMPIÑA FACIAL 15GR",
+  "price": 1.25,
+  "sell_price": 3,
+  "aviability": 3,
+  "COSTO TOTAL": 3.75,
+  "VENTA TOTAL": 9
+ },
+ {
+  "code": "FN006",
+  "name_product": "CERA DEPILADORA CERAMIEL 1 KILO",
+  "price": 12,
+  "sell_price": 20,
+  "aviability": 2,
+  "COSTO TOTAL": 24,
+  "VENTA TOTAL": 40
+ },
+ {
+  "code": "FN007",
+  "name_product": "CERA DEPILADORA CERAMIEL 500 GRAMOS",
+  "price": 7.8,
+  "sell_price": 14,
+  "aviability": 4,
+  "COSTO TOTAL": 31.2,
+  "VENTA TOTAL": 56
+ },
+ {
+  "code": "FN008",
+  "name_product": "PINCEL PARA CEJAS",
+  "price": 0.7,
+  "sell_price": 1.5,
+  "aviability": 11,
+  "COSTO TOTAL": 7.7,
+  "VENTA TOTAL": 16.5
+ },
+ {
+  "code": "FN009",
+  "name_product": "CRISTALES SURTIDOS SOBRE GRANDE",
+  "price": 1,
+  "sell_price": 2,
+  "aviability": 2,
+  "COSTO TOTAL": 2,
+  "VENTA TOTAL": 4
+ },
+ {
+  "code": "FN010",
+  "name_product": "CRISTALES SURTIDOS SOBRE PEQUEÑO",
+  "price": 0.7,
+  "sell_price": 1.5,
+  "aviability": 3,
+  "COSTO TOTAL": 2.1,
+  "VENTA TOTAL": 4.5
+ },
+ {
+  "code": "FN11",
+  "name_product": "EFECTO ESPEJO",
+  "price": 1.3,
+  "sell_price": 3,
+  "aviability": 10,
+  "COSTO TOTAL": 13,
+  "VENTA TOTAL": 30
+ },
+ {
+  "code": "AV01",
+  "name_product": "ALCOHOL LITRO",
+  "price": 2.75,
+  "sell_price": 3.9,
+  "aviability": 10,
+  "COSTO TOTAL": 27.5,
+  "VENTA TOTAL": 39
+ },
+ {
+  "code": "AV02",
+  "name_product": "ALCOHOL ML 500 SPRAY",
+  "price": 1.9100000000000001,
+  "sell_price": 3,
+  "aviability": 14,
+  "COSTO TOTAL": 26.74,
+  "VENTA TOTAL": 42
+ },
+ {
+  "code": "AV03",
+  "name_product": "ALCOHOL ML 240",
+  "price": 0.79,
+  "sell_price": 1.2,
+  "aviability": 36,
+  "COSTO TOTAL": 28.44,
+  "VENTA TOTAL": 43.2
+ },
+ {
+  "code": "VA01",
+  "name_product": "VELA PARA VELOTERAPIA",
+  "price": 8,
+  "sell_price": 10,
+  "aviability": 2,
+  "COSTO TOTAL": 16,
+  "VENTA TOTAL": 20
+ },
+ {
+  "code": "FN12",
+  "name_product": "CEPILLO DESINFECCION ",
+  "price": 0.5,
+  "sell_price": 1,
+  "aviability": 47,
+  "COSTO TOTAL": 23.5,
+  "VENTA TOTAL": 47
+ } 
+]
