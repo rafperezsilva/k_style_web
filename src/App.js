@@ -28,6 +28,16 @@ window.addEventListener('load', () => {
   }
 });
   
+function showMessage(msg){
+  // Get the snackbar DIV
+  var x = document.getElementById("snackbar");
+  x.innerHTML = msg;
+  // Add the "show" class to DIV
+  x.className = "show";
+
+  // After 3 seconds, remove the show class from DIV
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
 function isAdminRole(){
   return getCookie("role") && getCookie("role") === "admin"
 }
@@ -38,8 +48,9 @@ function sessionHandler(user, pass){
     mainDiv.style.display = "block"
   } else {
     mainDiv.style.display = "none"
-    console.log("SESSION  " +  getCookie("role") + " IS ADMIN " + isAdminRole())
+    //console.log("SESSION  " +  getCookie("role") + " IS ADMIN " + isAdminRole())
   }
+  preInvoiceRefresh()
 }  
 function loginRequest(user, pass){
   const mainDiv = document.getElementById("main_div")
@@ -47,7 +58,7 @@ function loginRequest(user, pass){
         axios
         .get("http://172.16.0.154:1234/validation?user="+user+"&pass="+pass)
         .then(function (response) {
-         console.log("DATA -- " +  JSON.stringify(response.data.role))
+         //console.log("DATA -- " +  JSON.stringify(response.data.role))
          hideLoading();
          setCookie("role",response.data.role,1)
           mainDiv.style.display = response.data.role === "admin" ? "block" : "none"
@@ -56,7 +67,7 @@ function loginRequest(user, pass){
         .catch(function (error) {
           hideLoading();
           mainDiv.style.display = "block"
-          console.log(error);
+          //console.log(error);
           sessionHandler()
         });
     
@@ -89,37 +100,38 @@ function fetchProductList(){
   axios
   .get("http://172.16.0.154:1234/product")
   .then(function (response) {
-    //console.log("DATA -- " +  JSON.stringify(response.data.products))
+    ////console.log("DATA -- " +  JSON.stringify(response.data.products))
     hideLoading();
     productsList = response.data.products
     ReactDOM.render(
       ListProductSection()
      , document.getElementById("floating_list"));
      sessionHandler()
-    
+     displayCartList(cart.length > 0)
+     inVoiceViewHandler(false)
     })
      
   .catch(function (error) {
     hideLoading();
-    console.log(error);
+    //console.log(error);
   });
  /* fetch('')
       .then(res => {
           res.json();
-          console.log( "RES > " + res.json())
-          console.log( res.json())
+          //console.log( "RES > " + res.json())
+          //console.log( res.json())
       })
       .then(res => {
-        console.log(res)
+        //console.log(res)
       });*/
 }
 function deleteProduct(product) {
    displayLoading();
-  console.log("DELETE --> " + JSON.stringify(product))
+  //console.log("DELETE --> " + JSON.stringify(product))
   axios.get('http://172.16.0.154:1234/delete_product?id='+product.id, {product})
   .then(function (response) {
     hideLoading();
-    console.log(" --> "+JSON.stringify(response));
+    //console.log(" --> "+JSON.stringify(response));
     productsList = response.data.products
      ReactDOM.render(
       ListProductSection()
@@ -127,32 +139,33 @@ function deleteProduct(product) {
   })
   .catch(function (error) {
     hideLoading();
-    console.log(error);
+    //console.log(error);
   });
 }
 function updateProduct(product) {
-  console.log("PUT --> " + JSON.stringify(product))
+  //console.log("PUT --> " + JSON.stringify(product))
   displayLoading();
   axios.put('http://172.16.0.154:1234/product', {product})
   .then(function (response) {   
-    console.log(" --> "+JSON.stringify(response));
+    //console.log(" --> "+JSON.stringify(response));
     productsList = response.data.products
     ReactDOM.render(
       ListProductSection()
-     , document.getElementById("floating_list"));     hideLoading();
+     , document.getElementById("floating_list")); 
+         hideLoading();
   })
   .catch(function (error) {
-    console.log(error);
+    //console.log(error);
     hideLoading();
   });
 }
 function setNewProduct(product) {
-  console.log("POST --> " + JSON.stringify(product))
+  //console.log("POST --> " + JSON.stringify(product))
   displayLoading();
   axios.post('http://172.16.0.154:1234/product', {product})
   .then(function (response) {
     
-    console.log(response);
+    //console.log(response);
     productsList = response.data.products
     ReactDOM.render(
       ListProductSection()
@@ -161,12 +174,19 @@ function setNewProduct(product) {
   })
   .catch(function (error) {
     hideLoading();
-    console.log(error);
+    //console.log(error);
   });
 }
 function displayCartView(){
+
+  
+
   ReactDOM.render(
-    ListProductSection(cart,"cart")
+    <div>
+    {ListProductSection(cart,"cart")}
+      </div>
+
+   
    , document.getElementById("floating_cart_list"));
 }
 function onSearchInputChange(){
@@ -178,19 +198,35 @@ function onSearchInputChange(){
     }); 
     data = productItem;
   }  
-  console.log("DATA FILTER SEARCH " + data.length)  
+  //console.log("DATA FILTER SEARCH " + data.length)  
   ReactDOM.render(
     ListProductSection(data)
    , document.getElementById("floating_list"));
  //  ReactDOM.render(<ProductList products={data}/>, document.getElementById("list_container"));
 }
 function ListProductSection(data,type){
-  console.log("ListProductSection TYEP " + type)
+  //console.log("ListProductSection TYEP " + type)
+  
+  function isVisible() {
+    switch (type) {
+      case "cart":      
+      //console.log("CARTS LENGHT " + cart.length )  
+        return cart.length > 0;
+        break;    
+      default:
+        return true;
+        break;
+    }
+  }
+  //console.log("IS VISIBLE CART " + isVisible())  
   return(
-    <div className="pre_invoice">
-        <PreInvoice  type={type}/>
+    <div style={isVisible() === true ? {display:"inline"} : {display:"none"}}>
+        
         <input className='search_input' type="text"  style={type === "cart" ? {display:"none"} : {display:"inline"}} id="search_product_input"       placeholder='Busqueda...'  onChange={onSearchInputChange}></input>
         <ProductList  products={data} type={type}/>
+      
+
+       
      </div>
   );
 }
@@ -219,7 +255,7 @@ function fillItems2(data, type){
   price.value = data.price 
   sell_price.value = data.sell_price 
   name.disabled = type !== "new"
- console.log("ITEMS FILLES " +  type + " NP " + data.name_product)
+ //console.log("ITEMS FILLES " +  type + " NP " + data.name_product)
 }
 /* FILL INPUTS  */
 function fillItems(data){
@@ -261,14 +297,14 @@ const displayLoading = () => {
   if(!loaderContainer) { 
     loaderContainer = document.querySelector('.loader-container');
   }
-    console.log("SHOW LOADER")
+    //console.log("SHOW LOADER")
     loaderContainer.style.display = 'block';
   
 };
 
 const hideLoading = () => { 
   if(loaderContainer) {
-  console.log("HIDE LOADER")
+  //console.log("HIDE LOADER")
   loaderContainer.style.display = 'none';
   } 
 };
@@ -330,9 +366,23 @@ function updateButtonTitle(){
       break;
   }
 }
+function preInvoiceRefresh(){
+  console.log("REFRESH INVOICE - CARTS ITEMS " + cart.length )
+  if(document.getElementById("pre_invoice")){
+    document.getElementById("pre_invoice").style.display = cart.length > 0 ? "inline" : "none"
+    ReactDOM.render(<PreInvoice  className='pre_invoice' type={"cart"}/>, document.getElementById("pre_invoice"));
+  }
+  
+}
+
 function displayModeView(mode, product){
   setModalType(mode === "sell" ? "sell" : "new")
-  
+  console.log("DISPLAY MODE VIEW --> " + mode)
+  if(mode === "sell" || mode === "new"){
+      displayCartList(false)  
+     displayProductList(false)
+  }
+  inVoiceViewHandler(false)
   if(document.getElementById("centered_container")){
     ReactDOM.render(<InpustProductView type={mode} product={product}/>, document.getElementById("centered_container"));
   }
@@ -345,12 +395,12 @@ function handlerAction(type){
         const pdroductAtDb = productsList.filter(obj => {
           return obj.code ===  validateData().data.code;
         });
-        console.log("VALIDATED DATA " +  JSON.stringify(pdroductAtDb))
+        //console.log("VALIDATED DATA " +  JSON.stringify(pdroductAtDb))
         if(pdroductAtDb.length > 0){
           const vData = validateData().data;
-          console.log("VALIDATED DATA  AVIS"  +typeof( validateData().data.aviability ) + " //  "  + typeof(pdroductAtDb[0].aviability))
+          //console.log("VALIDATED DATA  AVIS"  +typeof( validateData().data.aviability ) + " //  "  + typeof(pdroductAtDb[0].aviability))
           vData.aviability =  parseInt(pdroductAtDb[0].aviability) +  parseInt(validateData().data.aviability);
-           console.log("VALIDATED DATA  AVIS"  + ( validateData().data.aviability ) + " //  "  +  pdroductAtDb[0].aviability)
+           //console.log("VALIDATED DATA  AVIS"  + ( validateData().data.aviability ) + " //  "  +  pdroductAtDb[0].aviability)
            updateProduct(vData)
         } else {
           setNewProduct(validateData().data)
@@ -366,37 +416,164 @@ function handlerAction(type){
 
 }
 
-function PreInvoice(props){
-  function getInvoiceData(){
-    var productQtt = 0;
-    var totalSell = 0;
+/* INVOCE VIEW  */
 
-    cart.forEach(function(itemCart) {
-      productQtt = itemCart.qtty + productQtt;
-      totalSell = totalSell + (parseFloat(itemCart.qtty)*parseFloat(itemCart.sell_price));
-    })
+function Invoice(props){
+  var productQtt = 0;
+  var totalSell = 0;
+ // //console.log("PRE INVOICE TYPR " +  props.type)
+ window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+  cart.forEach(function(itemCart) {
+    productQtt = itemCart.qtty + productQtt;
+    totalSell = totalSell + (parseFloat(itemCart.qtty)*parseFloat(itemCart.sell_price));
+  })
+  //console.log("PRE INVOICE DATA " ,  productQtt + " // " + totalSell)
+  function SetDropdownPayment(){
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    
+    function paySelect(sender){
+      document.getElementById("dropbtn").innerHTML = sender
+       //console.log(sender)
+    }
+
+    
     return(
-      <div>
-        <label>Cantidad de Productos:{productQtt}</label><br/>
-        <label>Venta Total: ${totalSell}</label><br/>
+      <div className="dropdown dropdown_payment">
+      <label  id="dropbtn" onClick={() => myFunction()} className="dropbtn">Tipo de pago</label>
+      <div  id="myDropdown" class="dropdown-content">
+      <label className='dtp_label' onClick={() => paySelect("Zelle")}>Zelle</label><br/>
+      <label className='dtp_label' onClick={() => paySelect("Efectivo Bs")}>Efectivo Bs</label><br/>
+      <label className='dtp_label' onClick={() => paySelect("Efectivo $")}>Efectivo $</label><br/>
+      <label className='dtp_label' onClick={() => paySelect("Pago Movil / Transferencia")}>Pago Movil / Transferencia</label>
+      </div>
+    </div>
+    );
+  }
+  function SetDropdownDelivery(){
+    function myFunction() {
+      document.getElementById("myDropdown_delivery").classList.toggle("show");
+    }
+    
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    
+    function deliverySelect(sender){
+      document.getElementById("dropbtn_delivery").innerHTML = sender
+        //console.log(sender)
+    }
+    return(
+      <div className="dropdown">
+      <label  id="dropbtn_delivery" onClick={() => myFunction()} className="dropbtn">Tipo de envío</label>
+      <div id="myDropdown_delivery" class="dropdown-content">
+      <label className='dtp_label' onClick={() => deliverySelect("Delivery")}>Delivery</label><br/>
+      <label className='dtp_label' onClick={() => deliverySelect("Pick-Up")}>Pick-Up</label><br/>
+      <label className='dtp_label' onClick={() => deliverySelect("En Tienda")}>En Tienda</label><br/>
+      </div>
+    </div>
+    );
+  }
+
+  function currentDateTime(){
+    return "Hora:" + new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString();
+  }
+  return(
+    <div>
+       <div  id='pre_invoic_content' className='pre_invoic_content'>
+        <lu>
+        <input type="text" id="client_name"   placeholder='Nombre del Comprador'></input> <br/>
+        <input type="number" id="client_id"   placeholder='Número de Cédula'></input> <br/>
+        <label className='product_qtty_l' >Cantidad de Productos: <strong style={{color:'green'}}> <br/>{productQtt} Unidades </strong></label><br/>
+        <label className='product_qtty_l' >Venta Total: <strong style={{color:'green'}}> <br/>${totalSell}</strong></label>
+        </lu>
+        <label className='label_time'>{currentDateTime()}</label><br/>
+        <SetDropdownPayment/>
+        <SetDropdownDelivery/>
+        </div>
+    </div>
+  );
+}
+/* PRE INVOICE */
+function PreInvoice(props){
+   
+   
+  function getInvoiceData(){
+    
+    return(
+      <div id='pre_invoice' className='pre_invoice'> 
+      <button className='cart_active_button' style={cart.length > 0 ? {display:"block"} : {display:"none"}} onClick={() => inVoiceViewHandler(true)}>&#x1F6D2;</button>
+      
       </div>
     );
   }
   return(
-    <div style={props.type === "cart" ?  {display:"inline"} : {display:"none"}}>
-    {getInvoiceData}
+    <div  >
+    {getInvoiceData()}
     </div>
   );
 }
 
 function displayProductList(displayV){
+  if(displayV === true){
+    displayCartList(false)
+  }
    const fList =  document.getElementById("floating_list")  
    sessionHandler();  
-   console.log("L " + fList + "SHOW LIST " + displayV)
+   //console.log("L " + fList + "SHOW LIST " + displayV)
    if(fList){
     fList.style.display = displayV === true ? "inline" : "none"
    }
 }
+
+function displayCartList(displayV){
+  if(displayV === true){
+    displayProductList(false)
+  }
+  const fList =  document.getElementById("floating_cart_list")  
+  sessionHandler();  
+  //console.log("L " + fList + "SHOW LIST " + displayV)
+  if(fList){
+   fList.style.display = displayV === true ? "inline" : "none"
+  }
+}
+
 
 function validateData() {
   const product  = {
@@ -421,7 +598,7 @@ function onCodeInputChange(event){
     if(event.target.id !== "product_code"){ return }    
      const dataResult = ifExitingProduct(event.target.value);
      if (dataResult !== undefined) {
-      console.log("PRODUCT AT STORE  " + dataResult.name_product);
+      //console.log("PRODUCT AT STORE  " + dataResult.name_product);
       if (modalType ===  "sell") {
         fillItems2(dataResult, "sell");
       } else {
@@ -459,6 +636,23 @@ function LoginPage(){
     </div>
   );
 }
+function inVoiceViewHandler(show){
+  const iv = document.getElementById("invoice_m")
+  const mainV = document.getElementById("centered_container")
+  if(iv){
+  iv.style.display = cart.length > 0 && show === true ?  "inline" : "none"
+  if(mainV){
+    mainV.style.display = show === true ?  "none" : "inline"
+  }
+  if(show === true){
+    displayProductList(false)
+  }
+  ReactDOM.render(
+    <Invoice/>
+   , iv);
+  }       
+}
+
 function KeylaApp() {
   fetchProductList();
   [modalType, setModalType] = useState("new");
@@ -467,6 +661,8 @@ function KeylaApp() {
   return(
     
     <div className="App">
+      <div id="snackbar">Some text some message..</div>
+
     <div style={{display:"none"}} className="loader-container">
     <div className="loader"/>
 
@@ -474,28 +670,36 @@ function KeylaApp() {
     </div>
     <div className='main_div' id='main_div'><LoginPage/></div>
     <header  className="App-header">
+      <div id="pre_invoice">
+      </div>
+      
       <label>{getCookie("role")}</label><br/>
       <img   src={logo} className="App-logo logo" alt="logo" />
       <div className='add_product_content'>
-        <button   variant="primary"  onClick={() => displayProductList(true)} ><img  className='icon' src="https://i.ibb.co/dDQkdWH/logo-list.png"/></button>
-        <button className="sell_product" variant="primary"  onClick={() => displayModeView("sell")} ><img  className='icon' src="https://icons.veryicon.com/png/o/miscellaneous/newstock/sell-out.png"/></button>
-        <button className="add_product" variant="primary"  onClick={() => displayModeView("new")}><img className='icon' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGpcLEfrRCg--M3Ikin5x2K8FZVRdTtrfiZn5MzzZgdQ&s"  /> </button>
+        <button className="sell_product"  variant="primary"  onClick={() => displayCartList(true)} >&#x1F4E6;</button>
+        <button className="sell_product"  variant="primary"  onClick={() => displayProductList(true)} >&#x1F4D1;</button>
+        <button className="sell_product" variant="primary"  onClick={() => displayModeView("sell")} >&#x1F6CD;</button>
+        <button className="add_product" variant="primary"  onClick={() => displayModeView("new")}>&#x1F5C3;</button>
       </div>
       <div id="centered_container">
       </div>
-      
-    </header>
-        <div id="floating_list" className='floating_list' >
-        <ProductList /> 
+      <div id="invoice_m">
+       
+      </div>
+       <div id="floating_list" className='floating_list' >
+
        </div>
-       <div id="floating_cart_list" className='floating_cart_list'></div>
+       <div id="floating_cart_list" className="floating_cart_list"/>
+     
+    </header>
+   
   </div>
   );
 }
 
 
 function InpustProductView(props){
-  console.log("PROPS AT INPUT " + JSON.stringify(props))
+  //console.log("PROPS AT INPUT " + JSON.stringify(props))
   clearInputs(false);
   return(
     <div>
@@ -510,34 +714,7 @@ function InpustProductView(props){
     </div>
   )
 }
-
-function App() {
-  [modalShow, setModalShow] = useState(false);
-  [modalType, setModalType] = useState("new");
-  fetchProductList()
-  updateButtonTitle()
-  //productsList = products;
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img   src={logo} className="App-logo logo" alt="logo" />
-        <div className='add_product_content'>
-        <button className="sell_product" variant="primary"  onClick={() => displayModal("sell")}>Venta</button>
-        <button className="add_product" variant="primary"  onClick={() => displayModal("new")}>Nuevo producto</button>
-        </div>
-       
-        <div id='list_container' className='player_list'>
-        </div> 
-      </header>
-     
-      <AddProductModal
-        className= "modal_content"
-        show={modalShow}
-        modalType={modalType}
-        onHide={() => setModalShow(false)}></AddProductModal>
-    </div>
-  );
-}
+ 
 /*
 STORED PLAYER  LIST 
 */
@@ -547,19 +724,20 @@ function ProductList(props) {
   
   var data = props.products !== undefined && props.products.length > 0 ? props.products : productsList;
   const listItems = data.map((d) => <div onClick={() => clickItemProduct(d)}><ProductItem product={d} type={props.type}/></div>);
-//console.log("ACTIVE PLAYERS " + playersList.length);
+////console.log("ACTIVE PLAYERS " + playersList.length);
   function clickItemProduct(item){
-    console.log("CLICK AT " + JSON.stringify(item))
-    productToEdit = item;
-    displayModal("edit");
+    //console.log("CLICK AT " + JSON.stringify(item))
+    /*productToEdit = item;
+    displayModal("edit");*/
   }
 
   return (
-    <div id="player_list_container" className='player_list'>
-     
-      <button className="close_list_b" onClick={() => displayProductList(false)}><img className='icon' src="https://www.citypng.com/public/uploads/preview/hd-red-square-close-x-button-icon-transparent-background-31631915371hxp2guhs5y.png"/></button>
+      <div>
+      <button className="close_list_b" onClick={() => props.type === "cart" ? displayCartList(false) : displayProductList(false)}> ❌ </button>
+      <div id="player_list_container" className='player_list'>     
       {listItems}
       <button style={props.type === "cart" ?  {display:"inline"} : {display:"none"}}>VENDER</button>
+      </div>
     </div>
   );
 
@@ -584,6 +762,7 @@ function ProductItem(props) {
        }
        return "🤔 " + diff 
       }
+
       function addToCartHandler(product){
         const itemAtCart = cart.filter(obj => {
           return obj.id === product.id;
@@ -597,24 +776,38 @@ function ProductItem(props) {
           cart.push(product);
         }
         displayCartView();
-        console.log("CARTS \n " + JSON.stringify(cart))
+        //console.log("CARTS ITEMS " + (cart.length > 0))
+        //displayCartList(cart.length > 0)
+        preInvoiceRefresh();
+        showMessage(product.name_product + "<br/>Agregado a lista de compras!")
       }
       function clickDeleteProduct(product){
+        const objIndex = cart.findIndex((obj => obj.id == product.id));
+        //console.log("AT INDEZ -- " + objIndex)
         if(props.type === "cart"){
+          if(product.qtty > 1) {
+            cart[objIndex].qtty = cart[objIndex].qtty - 1
+          } else if (product.qtty === 1) {
+            cart.splice(objIndex,1); // first element removed
+          }
+          //console.log("CARTS ITEMS " + (cart.length > 0))
+          displayCartList(cart.length > 0)
+          displayCartView();
+          preInvoiceRefresh();
           return 
         }
         if (window.confirm('Estas seguro de borrar ' + product.name_product + ' del inventario?\nEste paso es irreversible')) {
           deleteProduct(product);
-          console.log('Thing was saved to the database.');
+          //console.log('Thing was saved to the database.');
         } else {
           // Do nothing!
-          console.log('Thing was not saved to the database.');
+          //console.log('Thing was not saved to the database.');
         }
       }
      return(
       <div className="list_item">
-        <button className='delete_button' onClick={() => clickDeleteProduct(props.product)}><img className='icon' src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT2Cd5RfH9ce-ahp1xi4PhiKYz_MQrONAjGfEQeH72pfuDovu_0fX9Fwe1QAWMAQiilhM&usqp=CAU"></img></button>
-        <button className='add_to_cart_button' onClick={() => addToCartHandler(props.product)} style={props.type === "cart" ? {display:"none"} : {display:"inline"}}><img className='icon' src ="https://icons.veryicon.com/png/o/miscellaneous/newstock/sell-out.png"></img></button>
+        <button className='delete_button' onClick={() => clickDeleteProduct(props.product)}>&#x1F5D1;</button>
+        <button className='add_to_cart_button' onClick={() => addToCartHandler(props.product)} style={props.type === "cart" ? {display:"none"} : {display:"inline"}}>&#x1F6D2;</button>
         <label className='qtty_label' style={props.type === "cart" ? {display:"inline"} : {display:"none"}}> Cant {props.product.qtty}</label>
         <label className='product_label'>{props.product.name_product}</label> <label className='code_label'>Cod.{props.product.code}</label><br/><br/>
         <label className='aviability_label' style={props.product.aviability <= 5 ? {color:"red"} : {color:"green"}}>Disponibles: {props.product.aviability}</label><br/>
@@ -624,177 +817,8 @@ function ProductItem(props) {
       </div>
      );
 }
-
-function AddProductModal(props) {
-  
-  if (modalType === "edit" && productToEdit) {
-    fillItems(productToEdit);
-  }
-
-  function addNewProduct(){
-    const code = document.getElementById("product_code") 
-    const name = document.getElementById("product_name") 
-    const aviability = document.getElementById("product_aviability") 
-    const price = document.getElementById("product_price") 
-    const sell_price = document.getElementById("product_sell_price")
-    const product  = {
-        "code": code.value,
-        "name_product":name.value,
-        "price":price.value,
-        "sell_price": sell_price.value,
-        "aviability": aviability.value,
-        "active": true
-      }
-      console.log("TYOE ADDING " + modalType)
-      const editables = productSell.filter(obj => {
-        return obj.code === code.value;
-      });
-     if (modalType == "edit" || editables.length > 0){
-      productsList.forEach((item, index) => {
-        if(item.code === code.value) {
-          productsList[index] = product;
-          setModalShow(false)
-          return
-        }
-      });
-      return
-     } else if (modalType == "sell"){
-      alert("Realizar venta");
-      return;
-     }
-      productsList.push(product);
-      setModalShow(false);
-      ReactDOM.render(<ProductList/>, document.getElementById("list_container"));
-      clearInputs(true)
-      productSell = [];
-  }
-
-  function handleChange(event) {
-    const doneButtonModal =  document.getElementById("modal_done_button")
-    const dataResult = ifExitingProduct(event.target.value);
-     if (modalType != "sell"){
-      setModalType(ifExitingProduct(event.target.value) ?  "edit" : "new")
-    }
-    updateButtonTitle()
-    if(event.target.id === "product_aviability") {
-      event.target.max  = parseInt(dataResult.aviability)
-      return
-    }
-   
-    if (dataResult) {
-      updateButtonTitle()
-      console.log("PRODUCT AT STORE  " + dataResult.name_product);
-      ReactDOM.render(<ProductItem product={dataResult}/>, document.getElementById("product_exist"));
-      document.getElementById("product_exist").style.display = "inline"
-         fillItems(dataResult);
-        if(doneButtonModal){
-          doneButtonModal.innerHTML = buttonTitle
-        }
-      if (modalType == "new") {
-        setModalType("edit")
-      }
-      updateButtonTitle()
-    } else {
-     // setModalType(modalType == "edit" ? "new" : "sell")
-     clearInputs(false)
-     if (modalType === "edit") {
-        setModalType("new")
-      } else if (modalType === "sell") {
-        setModalType("sell")
-      }
-      updateButtonTitle()
-      if(event.target.id === "product_code"){
-        clearInputs(false)
-        document.getElementById("product_exist").style.display = "none"
-
-      }
-      if(doneButtonModal){
-        doneButtonModal.innerHTML = buttonTitle
-      }
-      console.log("PRODUCT NO EXIST " + event.target.id);
- 
-
-     }
-     console.log("MODAL TYPE PRE ", modalType);
-     if (modalType != "sell"){
-      if(dataResult)
-      {
-        setModalType("edit")
-        console.log("SET MODAL AS EDIT  ", modalType);
-      }
-      else {
-        setModalType("new")
-        console.log("SET MODAL AS NEW  ", modalType);
-      }
-    }
-     document.getElementById("product_name").disabled = modalType != "new"
-     updateButtonTitle()
-     console.log("MODAL TYPE ", modalType);
-
-  }
-  /* ADD CART HAMDLER */
-  function addProductToCart(){
-    const code = document.getElementById("product_code");
-    const qtty = document.getElementById("product_aviability");
-    const productItem = productsList.filter(obj => {
-      return obj.code === code.value;
-    });   
-    if(qtty.value <= 0){
-      alert("Debe agregar una cantidad de productos!")
-      return
-    }
-    if(!productItem){
-      alert("Producto inexistente!")
-      return
-    }
-    const productItemOnCart = productSell.filter(obj => {
-      return obj.product.code === code.value;
-    });
-    var qttyOnCart =  0;
-    console.log("ONCART QTYY ITEM " + JSON.stringify(productItemOnCart))
-    if(productItemOnCart.length > 0){
-      productItemOnCart.forEach((item) => {
-        qttyOnCart += parseInt(item.qtty)
-     });
-      
-    }
-    qttyOnCart += parseInt(qtty.value);
-    console.log("ACIABILITY --- " + qttyOnCart , "\nAVIABLE " ,  (productItem[0].aviability) - qttyOnCart)
-    if((parseInt(productItem[0].aviability) - qttyOnCart) < 0 || productItem[0].aviability < qtty.value) {
-      alert("No hay cantidad suficiente")
-      return
-    }
-    
-    const itemCart = {product:productItem[0], qtty: qtty.value}
-    productSell.push(itemCart);
-    ReactDOM.render(<CartView/>, document.getElementById("cart_list"));
-    clearInputs(true)
-    document.getElementById("product_exist").style.display = "none"
-
-  }
- 
-  return (
-    <ReactplosiveModal
-      title={<h4>{modalType == "new" ? "Agrega un nuevo producto" : modalType == "edit"  ? "Actualizar Producto"  : "Registra Nueva Venta"}</h4>}
-      isVisible={modalShow}
-      onClose={() => setModalShow(false)}
-    >
-      <div id='cart_list' style={{display:modalType === "new" ? "none" : "inline"}}></div>
-      <div id='product_exist'></div>
-      <input type="text"   id="product_code"       placeholder='Código' onChange={handleChange}></input> <br/>
-      <input type="text"   id="product_name"  disabled="true"     placeholder='Nombre del pruducto'></input> <br/>
-      <input type="number" id="product_aviability" placeholder='Cantidad' min={1} ></input> <br/>
-      <input type="number" id="product_price"      placeholder='Precio de costo' style={ modalType === "new" ? {display:"inline"} : {display:"none"}} ></input> <br/>
-      <input type="number" id="product_sell_price" placeholder='Precio de venta' disabled={ modalType === "new" ?  false :  true} ></input> <br/>
-      <input type="file" style={ modalType === "new" ? {display:"inline"} : {display:"none"}}></input> <br/>
-      <button  onClick={() => addProductToCart()} style={ modalType === "sell" ? {display:"inline"} : {display:"none"}} >+</button><br/>
-      <button id='modal_done_button' onClick={() => addNewProduct()}>  {buttonTitle} </button>
-    </ReactplosiveModal>
-  );
-}
-
-const CartView = (props) => {
-  console.log("ON CART  " + JSON.stringify(productSell))
+ const CartView = (props) => {
+  //console.log("ON CART  " + JSON.stringify(productSell))
   const cartItems = productSell.map((d) => <div className='cart_list'><label> <b>{d.product.name_product}</b><br/><b>Cant.</b>{d.qtty} <b>Precio:</b> ${d.qtty*d.product.sell_price}</label></div>);
    function totalCart(){
     var total = 0;
@@ -810,38 +834,6 @@ const CartView = (props) => {
     </div>
   );
 };
-
-const QRReader = (props) => {
-  const delay = 500;
-
-  const previewStyle = {
-    height: 240,
-    width: 320
-  };
-
-  const [result, setResult] = useState("No result");
-
-  const handleScan = (result) => {
-    if (result) {
-      setResult(result);
-    }
-  };
-
-  const handleError = (error) => {
-    console.log(error);
-  };
-
-  return (
-    <>
-      <QrReader
-        delay={delay}
-        style={previewStyle}
-        onError={handleError}
-        onScan={handleScan}
-      />
-      <p>{result}</p>
-    </>
-  );
-};
+ 
 //export default App;
 export default KeylaApp;
